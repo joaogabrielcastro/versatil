@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Informações do Usuário</title>
+    <style>
+        /* Estilos CSS podem ser adicionados aqui */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://boaforma.abril.com.br/wp-content/uploads/sites/2/2017/01/thinkstockphotos-635971942.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        form {
+            border: 1px solid red;
+            padding: 20px;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.8); /* Adiciona uma cor de fundo com opacidade */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: red;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff0000;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Teste Versátil</h1>
+        <form id="userForm">
+            <label for="numerodocartao">Número do Cartão:</label>
+            <input type="text" id="numerodocartao" name="numerodocartao" required>
+
+            <label for="validade">Data de Validade:</label>
+            <input type="text" id="validade" name="validade" required>
+
+            <label for="telefone">Número de Telefone:</label>
+            <input type="text" id="telefone" name="telefone" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <p><a href="URL_DO_LINK">Saiba mais</a></p>
+    </div>
+
+    <script>
+        // JavaScript pode ser adicionado aqui para processar o formulário
+        const form = document.getElementById("userForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const numerodocartao = document.getElementById("numerodocartao").value;
+            const validade = document.getElementById("validade").value;
+            const telefone = document.getElementById("telefone").value;
+
+            // Você pode fazer algo com os dados aqui, como exibi-los ou enviá-los para um servidor.
+            console.log(`Número do Cartão: ${numerodocartao}`);
+            console.log(`Data de Validade: ${validade}`);
+            console.log(`Número de Telefone: ${telefone}`);
+        });
+    </script>
+</body>
+</html>
+
